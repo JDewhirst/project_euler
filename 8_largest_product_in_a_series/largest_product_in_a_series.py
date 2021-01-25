@@ -22,7 +22,5 @@ while i < len(N)-14:
             new_product *= arr[i+j]
         if new_product > max_product: max_product = new_product
         i += 1
-
-    
     
 print(max_product)
