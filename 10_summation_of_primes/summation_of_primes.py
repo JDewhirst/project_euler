@@ -18,13 +18,14 @@ def isPrime(n):
     
 N = 2000000
 primes = 1
-primes_list = [2]
-i = 1
+primes_sum = 5 # 2 and 3 are prime
+i = 5
 while i<N:
-    i += 2
     if isPrime(i):
-        #primes += 1
-        primes_list.append(i)
-        #print(i)
+        primes_sum += i
+    i += 2
+    if i <= N and isPrime(i):
+        primes_sum += i
+    i += 4
         
-print(sum(primes_list))
+print(primes_sum)
